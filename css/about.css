@@ -38,6 +38,30 @@ nav a {
     text-decoration: none;
   }
 
+  /* Style for font family on headline */
+.hero-text {
+  font-family: 'Playfair Display', serif; 
+  font-size: 3.75rem; /* 60px equivalent */
+}
+
+/* Make lists display horizontally like tag chips */
+.skills-category ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.skills-category li {
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
   #greeting {
     margin-left: 160px;
     position: relative;
@@ -244,7 +268,7 @@ header img {
 }
 
 .animation-project {
-  background-image: url("/imgs/Ebook.png");
+  background-image: url("../imgs/Ebook.png");
 }
 
 .blog-project {
@@ -263,7 +287,8 @@ header img {
 }
 
 .paderborn {
-  background-image: url("../imgs/Logo_pader.png");
+  background-image: url(/Users/julietchukwuemeka/Desktop/Project_Website/imgs/Logo_pader.png)
+  url("/Users/julietchukwuemeka/Desktop/Project_Website/imgs/Logo_pader.png");
 }
 
 .tambov {

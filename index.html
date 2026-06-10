@@ -1,128 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juliet's World!</title>
-    <link href="css/main.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Lobster&display=swap" rel="stylesheet">
- </head>
-  <body>
-    <nav>
-      <div class="logo">
-          <h2>
-              <a href="index.html">J.C</a>
-          </h2>
-      </div>
-      <ul class="main-menu">
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="/Portfolio/Juliet_Chukwuemeka_Resume.pdf" target="_blank">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <header class="container">
-      <div id="greeting">
-          <div class="splash">
-            <img src="/Portfolio/imgs/brush1.png" alt="paint brush style">  
-          </div>
-        <h2>
-            M.Sc Computer Science, Frontend Developer, VR/AR enthusiast
-        </h2>
-        <br>
-        <p>
-            Currently based in Paderborn, NRW, designing and developing <b>new website prototypes.</b> 
-                </p>
-        
-        <p class="mywork">
-          <a href="#projects"> <b> Check out my work 😎</b></a>
-        </p>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliet's Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
 
-      <div id="main-photo">
-        <img src="imgs/photo1.png"
-          alt="A photo of me enjoying sunset at the beach"
-        />
-      </div>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+            <h2>
+              <a href="index.html" style="color: #b74e4e; text-decoration: none;">Juliet Chukwuemeka</a>
+                      </h2>
+        </div>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Juliet_Chukwuemeka_CV.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>               
+                 <li><a href="#contact" class="btn">Book Interview</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Here is the Projects section -->
-    <section id="projects">
-      <h2> — Projects</h2>
-      <br>
- <div> 
- <h3> E-book </h3>
- <a id="container-pic" href="https://julietchuks.github.io/EbookForRusEng/""> 
-    <img src="imgs/Ebook.png" style="margin-right: 100px; width: 100%;"> 
-  </a>
- <p style="max-width: 500px;">
-    A 6-months long Bachelor's thesis about an E-book for English language for Russian school children.  
- </p> 
- <div>
-    <h5> Electronic Book</h5>
-    <h5> Research </h5>
- </div>
- <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
- <div> 
-    <h3 style="text-align: center; "> Varobot </h3>
-    <a id="container-pic2" href="https://varobot-pg.github.io/""> 
-        <img src="imgs/Varobot.png"> </a>
-    <p style="max-width: 500px text-align: right;">
-        A 12-months long project into a VR/AR application which is 
-        <br>
-        used to program a real robot..  
-    </p> 
-    <div>
-        <h5> Mixed Reality</h5>
-        <h5> Robot Programming</h5>
-    </div>
- </div>
- <div style="clear: both;"></div>
-    </section>
-    <!-- Here is the about me section -->
-    <section id="about">
-        <h2> — About me</h2>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hey, I'm Juliet Chukwuemeka.</h1>
+            <p>
+                An IT Product Manager with over three years of experience delivering SaaS solutions.
+                I hold a Bachelor's and Master's degree in Computer Science with a strong background in AI.
+            </p>
 
-        <h3>
-           Master's student and Front-end developer from Nigeria.
-           <br> 
-           Currently based in Paderborn, NRW. 
-        </h3>
+            <a href="#contact" class="btn">Work with Me</a>
+        </div>
+
+        <!-- Right Column: Your New Photo Container -->
+    <div class="hero-image">
+      <img src="imgs/ProPhoto_hand.JPG" alt="Juliet Chukwuemeka - IT Product Manager" />
+  </div>
+
+    </section>
+
+    <!-- Career -->
+    <section class="career career-split" id="career-history">
+      <!-- Left Column: Your Image -->
+    <div class="career-image">
+      <img src="imgs/DeskImage.png" alt="Juliet working on product strategy roadmaps" />
+  </div>
+  <!-- Right Column: Your Career Text -->
+  <div class="career-content">
+        <h2>My Career Journey</h2>
+
+        <div class="career-block">
+                <h3>IT Product Manager at Rhenus Logistics</h3>
+                <p>
+                    I believe in the power of collaboration to create
+                    exceptional websites. As an extension of your team,
+                    I immerse myself in your vision and goals.
+                </p>
+              </div>
+
+              <div class="career-block">
+                <h3>SEO Specialist (Growth & Product Support) at StudySmarter</h3>
+
+                <p>
+                    I take an iterative approach in my work to ensure
+                    the final result aligns with your creative vision
+                    and reflects your unique brand identity.
+                </p>
+              </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+
+        <div class="stat">
+            <h2>5+</h2>
+            <p>Websites Made</p>
+        </div>
+
+        <div class="stat">
+            <h2>4</h2>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat">
+            <h2>3+</h2>
+            <p>Years of Design Experience</p>
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+
+        <h2>My Studies</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Collette Noll</h3>
+                <h4>Interior Design</h4>
+
+                <p>
+                    Concept and creation of interior designer
+                    Collette Noll's website with focus on her
+                    variety of client-forward services.
+                </p>
+
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Sofia Pazari</h3>
+                <h4>Home Goods</h4>
+
+                <p>
+                    Website and packaging design for
+                    independent maker Sofia Pazari's
+                    marketplace of original beauty,
+                    lifestyle and home goods.
+                </p>
+
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Sauce & Slice</h3>
+                <h4>Pizzeria</h4>
+
+                <p>
+                    Brand identity development and website
+                    redesign for family-owned Brooklyn
+                    pizzeria Sauce & Slice.
+                </p>
+
+                <a href="#">View Project</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+
+        <h2>What Clients Are Saying</h2>
+
+        <div class="testimonial">
+
+            <blockquote>
+                "Adri is so patient and thoughtful. She helped me
+                highlight my work in a way that makes me proud
+                of my unique approach to design."
+            </blockquote>
+
+            <p><strong>Collette Noll</strong></p>
+
+        </div>
+
+        <div class="testimonial">
+
+            <blockquote>
+                "Being an e-commerce entrepreneur isn't easy,
+                and Adri gave my products the design direction
+                they needed to become bestsellers."
+            </blockquote>
+
+            <p><strong>Sofia Pazari</strong></p>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2>Get in Touch!</h2>
+
         <p>
-            <span> I describe myself as a very motivated person who always seeks new opportunities to learn more <br> and develop herself.
- I'm fascinated by all-things design and develop, and love the idea of creating <br> products that can change someone's life for the better.
-            </span>
-            <br>
-            <br>
-            <br>
-            If you would like to get in touch with me, you check out my contact information <br> at the bottom of the page.        
+            Schedule a free introductory session to discuss
+            your web design needs.
         </p>
+
+        <button class="btn">
+            Book Consultation
+        </button>
+
     </section>
- <br>
-  <br>
-    <!-- Here is my footer -->
-    <section id="contact"> 
-    <div>
- <h2>
-    <a href="mailto:julieth.jay.chuks@gmail.com" target="_blank">juliet.jay.chuks@gmail.com </a>
- </h2>
- <p>
-    <span>
-        I hope is to further my career by disrupting the IT space. 
-        <br>
-        Let's get in touch ✌️.
-    </span>
- </p>
-<!-- 
- <a href="#" class="icon-link">
-    <span class="material-icons">
-      facebook 
-    </span>
- </a>   -->
- </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+
+        <h2>FAQ</h2>
+
+        <details>
+            <summary>Where Do We Begin?</summary>
+            <p>We start with a discovery call and project briefing.</p>
+        </details>
+
+        <details>
+            <summary>What Are My Prices?</summary>
+            <p>Pricing depends on project scope and requirements.</p>
+        </details>
+
+        <details>
+            <summary>How Long Does an Engagement Last?</summary>
+            <p>Most projects take between 2 and 8 weeks.</p>
+        </details>
+
     </section>
-  </body>
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>Adri</h3>
+
+        <p>123 Demo Street, New York</p>
+        <p>(555) 555-5555</p>
+        <p>email@example.com</p>
+
+        <form>
+            <input
+                type="text"
+                placeholder="First Name"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="Last Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+            <button type="submit">
+                Submit
+            </button>
+        </form>
+
+    </footer>
+
+</body>
 </html>

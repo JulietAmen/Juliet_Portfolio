@@ -1,355 +1,350 @@
-html{
-    scroll-padding-top: 50px;
-}
-
 *{
-    scroll-behavior: smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-  font-family: 'Lato', sans-serif; 
-    color: #333;
-    margin: 0;
-    font-size: 1.2em;
-    padding-top: 50px;
-}
-#about h2{
-  font-family: 'Lato', sans-serif; 
-
+  font-family:Arial, sans-serif;
+  line-height:1.6;
+  color:#333;
 }
 
-#about {
-  margin-left: 100px;
+header{
+  background:#fff;
+  padding:20px 8%;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid #eee;
 }
 
-#projects {
-  margin-left: 100px;
-}
-#contact{
-  margin-left: 100px;
-}
-.section {
-    padding: 20px;
-    margin: 25px;
-  }
- 
-
-nav a {
-    text-decoration: none;
-  }
-
-  #greeting {
-    margin-left: 80px;
-    position: relative;
-  }
-
-  #greeting h1 {
-    font-family: Baskerville, "Baskerville Old Face", Garamond, "Times New Roman",
-    serif;
-}
-#greeting h2{
-  font-family: 'Lato', sans-serif; 
-}
-#greeting p{
-  font-family: 'Lato', sans-serif; 
-}
-#projects h2{
-  font-family: 'Lato', sans-serif; 
-
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-ul.main-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    overflow-x: auto;
-    font-family: 'Lato', sans-serif; 
-  } 
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
 
-.main-menu a:link,
-.main-menu a:visited {
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+.logo{
+  font-size:1.5rem;
+  font-weight:bold;
+}
+
+.hero h1{
+  font-size:4rem;
+  margin-bottom:20px;
+}
+
+/* 1. Reset alignment inside the main hero layout container */
+.hero {
   display: flex;
-  align-items: center;
+  justify-content: space-between; /* Aligns the inner content box to the left */
+  align-items: center;         /* Keeps content centered vertically */
+  gap: 40px;
+  padding-left:60px 10%;           /* Gives it a nice breathing room gap from the absolute screen edge */
+  min-height:90vh;
+  background:#f8efefa9;
+  border-top: 1px solid #000000;    /* 1px makes it thin, solid means a solid line, #000000 is pure black */
+  border-bottom: 1px solid #000000;
+}
+
+/* 2. Remove any auto margins that might be centering the inner content wrapper */
+.hero-content {
+  flex: 1;                        /* Lets the text grow to occupy half the room */
+  max-width: 600px;
+  text-align: left;
+  padding-left: 60px;
+}
+
+/* Control the photo container size */
+.hero-image {
+  flex: 1;                        /* Occupies the remaining half of the room */
+  display: flex;
+  justify-content: center;        /* Centers your photo inside its allocated half */
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;               /* Caps the width so it doesn't get massively giant */
+  height: auto;                   /* Keeps aspect ratio stable */
+  border-radius: 50px;             /* Optional: Softens sharp photo corners */
+  object-fit: cover;
+}
+
+/* 3. Ensure the button doesn't stretch and behaves cleanly in left-alignment */
+.hero-content .btn {
+  display: inline-block;       /* Stops the button from taking up the entire width */
+}
+
+.hero p{
+  max-width:600px;
+  margin:auto;
+  margin-bottom:30px;
+  font-size:1.2rem;
+}
+
+/* Mobile Friendly Shield: Stacks them when screen sizes get cramped */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse; /* Stacks image nicely above text on mobile devices */
+    text-align: center;
+    padding: 40px 5%;
+  }
+  .hero-content {
+    text-align: center;
+  }
+}
+
+.btn{
+  background:#b74e4e;
+  color:white;
+  padding:20px 75px;
+  border: none;
+  border-radius:30px;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+.career {
+  display: flex;
+  justify-content: space-between; /* Spreads image to left, text to right */
+  align-items: center;            /* Perfectly centers them vertically */
+  gap: 50px;                      /* Clean breathing room between columns */
+  padding: 80px 10%;              /* Spacious top/bottom and side margins */
+}
+
+.career-section {
+  display: flex;
+  align-items: stretch;         /* Matches columns to the same height */
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0;                   /* Strips edge borders to let left image go flush */
+}
+
+.career-split {
+  display: flex;
+  align-items: stretch;       /* Forces both columns to match each other's height perfectly */
+  padding: 0;                 /* Strips out layout padding completely */
+  background-color: #ffffff;  /* Or whatever backdrop color you prefer */
+  width: 100%;
+}
+
+.career-image {
+  flex: 1;
+  width: 50%;
+  height: 650px;              /* Adjust this default value to control how tall the row is */
+  overflow: hidden;
+}
+
+.career-image img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;          /* Cuts the image cleanly without stretching it out of proportion */
+  display: block;
 }
 
-.main-menu a:hover,
-.main-menu a:active {
-  background-color: rgba(160, 95, 154, 0.11);
-  color: white;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Julius Sans One", sans-serif;
-}
-
-h1 {
-  font-size: 3.2em;
-}
-
-h2 {
-  font-size: 1.6em;
-}
-h5{
-  background-color: #f1f1f1;
-  border-radius: 28px;
-  margin-left:10px ;
-  padding: 5px 10px;
-  width: fit-content;
-  letter-spacing: .01em;
-  display: inline;
-}
-
-p {
-  font-size: 1.2em;
-}
-
-* {
+.career-content {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* Vertically aligns blocks cleanly */
+  padding: 80px 10%;            /* Generous padding for breathing room */
   box-sizing: border-box;
 }
 
-/* nav styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 10;
-  background: #FAF3F7;
-  width: 100%;
-  top: 0;
-  /**
-   * This height needs to be the same value as the
-   * value of the padding-top which is applied on the body.
-   * This is needed so that the navigation content and the body
-   * content do not collied with each other.
-   */
-  height: 50px;
+/* Typography Styling matching Screenshot 2026-06-10 at 22.32.28.jpg */
+.career-content h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 3.5rem;        /* Pushes down the main title away from subsets */
 }
 
-nav * {
+.career-block {
+  margin-bottom: 2.5rem;        /* Gaps out the career text blocks */
+}
+
+.career-block:last-of-type {
+  margin-bottom: 0;             /* Prevents extra bottom margin layout leaks */
+}
+
+.career-block h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.career-block p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;             /* Increases text-readability */
+  color: #333333;               /* Soft charcoal dark grey for reading track */
   margin: 0;
-  padding: 0;
 }
 
-.logo {
-
-      margin: 5px 50px 10px 50px;
+.career h2,
+.projects h2,
+.testimonials h2,
+.contact h2,
+.faq h2{
+  margin-bottom:40px;
+  text-align:center;
 }
 
-.logo a {
-  cursor: pointer;
-  color: grey;
+.stats{
+  padding:80px 8%;
+  display:flex;
+  justify-content:center;
+  gap:80px;
+  text-align:center;
+  background:#fafafa;
 }
 
-.logo h2 {
-    font-family: 'Lobster', cursive;
+.stat h2{
+  font-size:3rem;
 }
 
-.main-menu {
-  height: 100%;
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
 
-.main-menu li {
-  height: 100%;
-  display: inline-block;
-}
-/* end nav styles */
-
-/* header styles */
-header {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  background-color: #FAF3F7;
-  width: 100%;
-
-  /**
-   * This is used so that the header content (e.g. image)
-   * does not stretch too much on big screens
-   */
+.project-card{
+  border:1px solid #ddd;
+  padding:25px;
+  border-radius:12px;
 }
 
-/**
- * This is a CSS Child Selector (>). Selection all div(s) which are direct children
- * of a header element. More info can be seen here
- * https://redi-school.github.io/nrw-html-and-css-2021-spring/lesson20/#2-css-combinator-selectors
- */
-header > div {
-  flex: 1;
+.project-card h3{
+  margin-bottom:10px;
 }
 
-header img {
-  width: 100%;
-  border-radius: 20px;
-  max-height: 700px;
-  /* learn more about this property
-  here https://css-tricks.com/almanac/properties/o/object-fit/  */
-  object-fit: cover;
-}
-/* end header styles */
-
-.section > h2 {
-  text-align: center;
+.project-card a{
+  display:inline-block;
+  margin-top:15px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-#projects ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.testimonial{
+  margin-bottom:40px;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-#projects li {
-  position: relative;
-  width: 40%;
-  min-height: 700px;
-  margin: 50px;
-  list-style-type: none;
-  border: 2px solid #acbce7;
-  border-radius: 10px;
-  background-color: #30c67e;
-  background-size: cover;
+blockquote{
+  font-style:italic;
+  margin-bottom:10px;
 }
 
-#projects li:hover {
-  background-blend-mode: color-burn;
+.contact{
+  text-align:center;
+  background:#f8f8f8;
 }
 
-#projects .details {
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-  padding: 5px 20px;
-  background-color: #84a5d0;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+.contact p{
+  margin-bottom:20px;
 }
 
-.survey-project {
-  background-image: url("../imgs/project-survey.png");
+.faq details{
+  margin-bottom:15px;
+  border:1px solid #ddd;
+  padding:15px;
+  border-radius:6px;
 }
 
-.landing-project {
-  background-image: url("../imgs/project-yoga-landing-page.png");
+footer{
+  background:#111;
+  color:white;
+  padding:60px 8%;
 }
 
-.animation-project {
-  background-image: url("/imgs/Ebook.png");
+footer form{
+  display:grid;
+  gap:12px;
+  margin-top:20px;
+  max-width:500px;
 }
 
-.blog-project {
-  background-image: url("../imgs/project-the-food-blog.png");
+footer input{
+  padding:12px;
+  border:none;
 }
 
-#education li {
-  list-style-type: none;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 300px;
-  padding-left: 320px;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
-  margin-bottom: 50px;
+footer button{
+  padding:12px;
+  border:none;
+  cursor:pointer;
 }
 
-.aachen {
-  background-image: url("../images/RWTH_Aachen_University_Logo.png");
+@media (max-width: 992px) {
+  .career-content {
+    padding: 60px 6%;           /* Scales in text box gaps for medium screens or tablets */
+  }
 }
 
-.nus {
-  background-image: url("../images/nus-logo.png");
+@media(max-width:768px){
+
+  .career-section {
+    flex-direction: column;     /* Stacks the sections top-to-bottom on mobile layouts */
+  }
+
+  .career {
+    flex-direction: column;       /* Stacks columns: Image on top, text underneath on phones */
+    text-align: center;
+    gap: 30px;
+    padding: 50px 5%;
+  }
+
+  .career-split {
+    flex-direction: column;   /* Changes row into a column grid stack */
+  }
+  
+  .career-image, 
+  .career-content {
+    width: 100%;              /* Both expand to take full screen width on mobile phones */
+  }
+  
+  .career-image {
+    height: 400px;            /* Lowers image block box size so mobile screens aren't overwhelmed */
+  }
+  
+  .career-content {
+    padding: 50px 8%;         /* Keeps standard phone boundaries */
+    text-align: center;
+  }
 }
 
-.icon-container {
-  display: flex;
-  align-items: center;
-  min-height: 30px;
+.approach-content h2 {
+  margin-bottom: 2rem;
 }
 
-.icon-container *:first-child {
-  margin-right: 10px;
-}
+  .stats{
+      flex-direction:column;
+      gap:30px;
+  }
 
-.icon-link {
-  color: inherit;
-  text-decoration: none;
-}
-.icon-link:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.icon-link:hover {
-  opacity: 0.7;
-}
-
-.mywork a{
-    text-decoration: none;
-    color: black;
-    border-bottom: 3px solid currentColor;
-    padding: 10px;
-}
-
-.mywork :hover{
-    text-decoration: none;
-    color: black;
-    border-bottom: 15px solid currentColor;
-    padding: 10px; 
-}
-
-.section h2{
-    text-align: left;
-}
-
-#container-pic img{
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    transition: all .2s ease-in-out; 
-    border-radius: 5px;
-float: right;
-max-width: 45%;
-margin-right: 10px;
-}
-
-#container-pic img:hover{
-  transform: scale(1.1); 
-}
-
-
-#container-pic2 img{
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    transition: all .2s ease-in-out; 
-border-radius: 5px;
-float: left;
-max-width: 40%;
-margin-right: 10px;
-}
-
-#container-pic2 img:hover{
-  transform: scale(1.1); 
-}
-
-div a{
-    text-decoration: none;
-    color: black;
-}
-
-.full_screen{
-  height: 300%;
-  top: -100%;
-  position:absolute;
-  left: 0;
-  width: 100%;
-  object-fit: contain;
+  nav ul{
+      gap:15px;
+  }
 }

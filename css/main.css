@@ -144,7 +144,7 @@ nav a{
 .career-image {
   flex: 1;
   width: 50%;
-  height: 650px;              /* Adjust this default value to control how tall the row is */
+  height: 900px;              /* Adjust this default value to control how tall the row is */
   overflow: hidden;
 }
 
@@ -220,6 +220,84 @@ nav a{
 
 .stat h2{
   font-size:3rem;
+}
+
+/* Section Background Wrapper */
+.metrics-section {
+  background-color: #111111;    /* Deep matte black background */
+  padding: 100px 10%;           /* Generous vertical padding for that spacious look */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flexbox Row Container */
+.metrics-container {
+  display: flex;
+  justify-content: space-between; /* Spreads the three columns evenly */
+  align-items: flex-start;        /* Keeps cards aligned at their tops */
+  gap: 40px;                      /* Clean spacing between columns */
+  max-width: 1200px;              /* Limits maximum horizontal stretch */
+  margin: 0 auto;                 /* Centers the entire grid container on large screens */
+}
+
+/* Individual Feature Card */
+.metric-card {
+  flex: 1;                        /* Allows each column to take up equal width */
+  text-align: center;             /* Centers icons and all typography elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Badge Icon Area */
+.metric-icon {
+  margin-bottom: 24px;            /* Spacing between the badge icon and the headline */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metric-icon img {
+  width: 120px;                   /* Approximate size matching the screen capture badge diameter */
+  height: auto;
+  display: block;
+}
+
+/* Column Main Headers */
+.metric-card h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;                 /* Pure crisp white for readable contrast */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 12px;            /* Tight gap between main text and subtitle description */
+  letter-spacing: -0.02em;        /* Slightly tight tracking for a premium modern finish */
+}
+
+/* Column Descriptions */
+.metric-card p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #aaaaaa;                 /* Clean muted gray for visual hierarchy */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 📱 Responsive Mobile Grid Breakpoints */
+@media (max-width: 768px) {
+  .metrics-container {
+    flex-direction: column;       /* Changes side-by-side rows into a single vertical column stacked layout */
+    align-items: center;
+    gap: 60px;                    /* Increases gap slightly to differentiate stacked components */
+  }
+  
+  .metrics-section {
+    padding: 60px 5%;             /* Tighter section borders for mobile screens */
+  }
+  
+  .metric-card {
+    max-width: 400px;             /* Prevents text lines from getting too broad on portrait displays */
+  }
 }
 
 .project-grid{

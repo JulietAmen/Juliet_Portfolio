@@ -158,14 +158,64 @@
       </div>
     </section>
 
+    <!-- carousel -->
+
+    <section>
+      <div class="carousel-wrapper">
+        <!-- Hidden Radio Controls to Track Active Slides -->
+        <input type="radio" name="carousel-control" id="slide-1" checked />
+        <input type="radio" name="carousel-control" id="slide-2" />
+        <input type="radio" name="carousel-control" id="slide-3" />
+        <input type="radio" name="carousel-control" id="slide-4" />
+      
+        <!-- The Main Filmstrip Viewport -->
+        <div class="carousel-viewport">
+          <div class="carousel-inner">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-item">
+              <img src="imgs/bach-peace.JPG" alt="Beautiful landscape setup 1" />
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img src="imgs/bach-light.JPG" alt="Beautiful landscape setup 2" />
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img src="imgs/Grad-Juliet.jpg" alt="Beautiful landscape setup 3" />
+            </div>
+      
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <img src="imgs/Gradddd.jpg" alt="Beautiful landscape setup 4" />
+            </div>
+
+          </div>
+        </div>
+      
+        <!-- Navigation Dots Controls -->
+        <div class="carousel-dots">
+          <label for="slide-1" class="dot-trigger"></label>
+          <label for="slide-2" class="dot-trigger"></label>
+          <label for="slide-3" class="dot-trigger"></label>
+          <label for="slide-4" class="dot-trigger"></label>
+
+        </div>
+      </div>
+
+    </section>
+
     <!-- Education -->
     <section class="education-layout-section" id="education">
+       <!-- Left Side: Title Header (Renamed per Screenshot 2026-06-11 at 11.58.57.jpg) -->
+       <div class="education-title-column">
+        <h2>Education</h2>
+      </div>
       <div class="education-layout-container">
         
-        <!-- Left Side: Title Header (Renamed per Screenshot 2026-06-11 at 11.58.57.jpg) -->
-        <div class="education-title-column">
-          <h2>Education</h2>
-        </div>
+       
     
         <!-- Right Side: Entries Container -->
         <div class="education-entries-column">
@@ -175,8 +225,7 @@
             <blockquote>
               "Completed a Master’s degree in Computer Science with a specialization in Software Engineering, 
               focusing on software design, development methodologies, and system architecture. Gained practical 
-              experience in building scalable applications, requirements analysis, testing, and project management.
-              ."
+              experience in building scalable applications, requirements analysis, testing, and project management."
             </blockquote>
             <p class="institution-meta">
               <strong>Universität Paderborn</strong>, <em>Master of Science in Computer Science (2024)</em>
@@ -201,19 +250,23 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact" id="contact">
-
-        <h2>Get in Touch!</h2>
-
-        <p>
-            Schedule a free introductory session to discuss
-            your web design needs.
-        </p>
-
-        <button class="btn">
-            Book Consultation
-        </button>
-
+    <section class="get-in-touch-section" id="contact">
+  
+      <!-- Left Side: Terracotta Content Column -->
+      <div class="touch-content-column">
+        <div class="touch-content-inner">
+          <h2>Get in Touch!</h2>
+          <p>Schedule a 1:1 introductory session with me to discuss your open role.</p>
+          <a href="#" class="book-consultation-btn">Book Interview</a>
+        </div>
+      </div>
+    
+      <!-- Right Side: Full-bleed Imagery Column -->
+      <div class="touch-image-column">
+        <!-- Replaced with the desk scene asset featured in Screenshot 2026-06-11 at 22.53.38.jpg -->
+        <img src="imgs/contact-lifestyle.jpg" alt="A phone showing design blueprints resting on a notebook next to a cup of black coffee" />
+      </div>
+    
     </section>
 
     <!-- FAQ -->

@@ -564,6 +564,7 @@ footer button{
 .education-title-column {
   flex: 1;                       /* Takes up roughly 1/3 of horizontal room */
   max-width: 350px;
+  padding-bottom: 50px;
 }
 
 .education-title-column h2 {
@@ -638,3 +639,229 @@ footer button{
   }
 }
 
+/* Container Box boundaries */
+.carousel-wrapper {
+  width: 100%;
+  margin: 40px auto;
+  position: relative;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Completely hide the radio logic dots out of sight */
+input[name="carousel-control"] {
+  display: none;
+}
+
+/* The Frame: acts like a window masking everything outside it */
+.carousel-viewport {
+  width: 100%;
+  height: 450px;              /* Controls how tall your slider is */
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* The Filmstrip Row: Houses the items side-by-side */
+.carousel-inner {
+  display: flex;
+  width: 400%;                /* 100% multiplied by total number of slides (3) */
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Elegant fluid slide timing */
+}
+
+/* Individual Slide sizing */
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* Maintains ratio and scales nicely */
+  display: block;
+}
+
+/* --- THE SLIDING MAGIC ENGINE --- */
+/* If Radio 1 is checked, hold filmstrip at 0% default start shift */
+#slide-1:checked ~ .carousel-viewport .carousel-inner {
+  transform: translateX(0%);
+}
+
+/* If Radio 2 is checked, slide leftward exactly 1/4 of total width */
+#slide-2:checked ~ .carousel-viewport .carousel-inner {
+  transform: translateX(-25%);
+}
+
+/* If Radio 3 is checked, slide leftward exactly 2/4 of total width */
+#slide-3:checked ~ .carousel-viewport .carousel-inner {
+  transform: translateX(-50%);
+}
+
+/* If Radio 4 is checked, slide leftward exactly 3/4 of total width */
+#slide-4:checked ~ .carousel-viewport .carousel-inner {
+  transform: translateX(-75%);
+}
+
+/* --- BOTTOM DOTS STYLING --- */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+/* Base style for individual dot buttons */
+.dot-trigger {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- DYNAMIC HIGHLIGHT ENGINE --- */
+/* Target specific dot labels based on which radio input is active */
+#slide-1:checked ~ .carousel-dots .dot-trigger:nth-child(1),
+#slide-2:checked ~ .carousel-dots .dot-trigger:nth-child(2),
+#slide-3:checked ~ .carousel-dots .dot-trigger:nth-child(3),
+#slide-4:checked ~ .carousel-dots .dot-trigger:nth-child(4) {
+  background-color: #ffffff;  /* Solid pure white for the active slide dot */
+  transform: scale(1.2);       /* Pop-out scaling emphasis effect */
+}
+
+/* 📱 Responsive Adjustment for Mobile */
+@media (max-width: 768px) {
+  .carousel-viewport {
+    height: 300px;            /* Scales height down on phone screens */
+  }
+}
+
+/* Core Section Container */
+.get-in-touch-section {
+  display: flex;
+  align-items: stretch;         /* Guarantees left background and right image share identical heights */
+  width: 100%;
+  padding: 0;                   /* Strips container padding to allow edge-to-edge bleed */
+  background-color: #aa524d;    /* Muted terracotta red/brown tone matching the screenshot */
+  box-sizing: border-box;
+}
+
+/* --- LEFT CONTENT COLUMN --- */
+.touch-content-column {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* Vertically aligns text contents in the center of the viewport */
+  padding: 100px 8%;            /* Spacious interior padding for content elements */
+  box-sizing: border-box;
+}
+
+/* Inner wrapper to enforce content max-widths from the reference layout */
+.touch-content-inner {
+  max-width: 460px;             /* Prevents paragraphs from getting too broad and unreadable */
+  width: 100%;
+}
+
+/* Section Title Typography */
+.touch-content-inner h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;               /* Clean white heading contrast */
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+/* Section Body Copy Styling */
+.touch-content-inner p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.9); /* Slightly soft white opacity tint for an elegant feel */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 48px;          /* Significant gap pushing down to the main button */
+  letter-spacing: -0.01em;
+}
+
+/* The "Book Consultation" Pill Button */
+.book-consultation-btn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: inline-block;
+  background-color: #f4f4f4;    /* Subtle soft white background tone matching screenshot button */
+  color: #222222;               /* Professional dark charcoal text tint */
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;        /* Strips out the classic anchor link underline */
+  padding: 18px 55px;           /* Recreates the broad horizontal width signature */
+  border-radius: 100px;         /* Fully round edges transforming the link into a pill */
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.book-consultation-btn:hover {
+  background-color: #ffffff;    /* Brightens clean up completely on cursor hover */
+  transform: translateY(-2px);  /* Gentle interactive elevation lift */
+}
+
+/* --- RIGHT IMAGE COLUMN --- */
+.touch-image-column {
+  flex: 1;
+  width: 50%;
+  min-height: 550px;            /* Ensures a distinct vertical presence on desktops */
+  overflow: hidden;
+}
+
+.touch-image-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* Crops and fills the column smoothly without warping proportions */
+  display: block;
+}
+
+/* 📱 Responsive Mobile Stack Shield */
+@media (max-width: 992px) {
+  .touch-content-column {
+    padding: 80px 5%;           /* Pulls in layout margins on medium or tablet-sized frames */
+  }
+}
+
+@media (max-width: 768px) {
+  .get-in-touch-section {
+    flex-direction: column;     /* Stacks elements: content color block on top, imagery below */
+  }
+  
+  .touch-content-column,
+  .touch-image-column {
+    width: 100%;                /* Forces both elements to expand to full mobile viewport width */
+  }
+  
+  .touch-image-column {
+    height: 400px;              /* Lower vertical constraint so phone users aren't scrolling forever */
+    min-height: auto;
+  }
+  
+  .touch-content-column {
+    padding: 60px 8%;
+    align-items: center;        /* Re-aligns components toward screen center on mobile viewports */
+  }
+  
+  .touch-content-inner {
+    text-align: center;
+  }
+  
+  .book-consultation-btn {
+    width: 100%;                /* Full width fluid touch button target for mobile accessibility optimization */
+    box-sizing: border-box;
+    padding: 18px 24px;
+  }
+}

@@ -425,4 +425,119 @@ footer button{
   nav ul{
       gap:15px;
   }
+
+  /* Main Section Wrapper */
+.case-studies-section {
+  background-color: #fcfcfc;    /* Clean, off-white background */
+  padding: 80px 10%;            /* Generous padding for breathing room */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Section Title - Huge, Bold, Centered */
+.section-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 4.5rem;            /* Matches the massive size in the image */
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 70px;          /* Significant gap before the grid starts */
+  letter-spacing: -0.04em;      /* Extra tight tracking for that high-end look */
+}
+
+/* The Row Grid Container */
+.cards-container {
+  display: flex;
+  justify-content: space-between; /* Spreads the three cards evenly */
+  align-items: stretch;           /* Forces all cards to be the exact same height */
+  gap: 30px;                      /* Spaces the columns perfectly */
+  max-width: 1200px;
+  margin: 0 auto;                 /* Centers the whole layout block on ultra-wide monitors */
+}
+
+/* The Individual Case Cards */
+.case-card {
+  flex: 1;                        /* Allows columns to divide space equally */
+  background-color: #828c7c;      /* Muted sage-green color matching the screenshot */
+  border-radius: 40px;            /* Highly exaggerated, clean rounded corners */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Inner Padding for Content */
+.card-content {
+  padding: 50px 40px;             /* Spacious padding inside each card */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Card Titles */
+.case-card h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #111111;                 /* Deep charcoal/black text color */
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 50px;            /* Pushes paragraph down, matching visual spacing */
+  letter-spacing: -0.02em;
+}
+
+/* Card Body Paragraphs */
+.case-card p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #222222;                 /* Highly readable, dark grey tint text */
+  margin-top: 0;
+  margin-bottom: 24px;            /* Gap before the link */
+  max-width: 280px;               /* Keeps paragraph lines short and balanced */
+}
+
+/* "View Project" Text Link */
+.project-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: underline;    /* Default clean underline style matching screenshot */
+  text-underline-offset: 4px;     /* Slight spacing below the text for the underline */
+  margin-top: auto;               /* Magic trick: pushes the link to the absolute bottom of the card content */
+  display: inline-block;
+  width: fit-content;
+}
+
+.project-link:hover {
+  color: #000000;
+  text-decoration-thickness: 2px; /* Emphasizes the underline on hover */
+}
+
+/* 📱 Responsive Screen Controls */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 3.5rem;            /* Scales down heading size slightly on tablets */
+    margin-bottom: 40px;
+  }
+  .card-content {
+    padding: 40px 30px;           /* Tightens up interior padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;       /* Stacks cards into one neat vertical column on mobile */
+    gap: 40px;
+  }
+  .case-card {
+    width: 100%;                  /* Cards take up full container width on phones */
+  }
+  .section-title {
+    font-size: 2.8rem;            /* Mobile-friendly headline sizing */
+  }
+  .case-card h3 {
+    margin-bottom: 30px;          /* Lowers spacing gap for mobile readability */
+  }
 }

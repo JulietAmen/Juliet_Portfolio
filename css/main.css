@@ -541,3 +541,100 @@ footer button{
     margin-bottom: 30px;          /* Lowers spacing gap for mobile readability */
   }
 }
+
+/* Base Layout Wrapper */
+.education-layout-section {
+  background-color: #f2f2f2;     /* Light premium grey background matching layout canvas */
+  padding: 100px 8%;             /* Deep top/bottom whitespace padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Master Flex Container */
+.education-layout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Left Title Properties */
+.education-title-column {
+  flex: 1;                       /* Takes up roughly 1/3 of horizontal room */
+  max-width: 350px;
+}
+
+.education-title-column h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;             /* Matches the exact font scale of the original text */
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.03em;       /* Sleek tight tracking */
+  margin: 0;
+}
+
+/* Right Content Rows Wrapper */
+.education-entries-column {
+  flex: 2;                       /* Takes up remaining 2/3 of space */
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;                     /* Column gap between separate degree details */
+}
+
+/* Individual Degree Blocks */
+.education-entry {
+  flex: 1;                       /* Ensures both degrees get identical layout widths */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styled Blockquote Content mimicking the quote cards layout */
+.education-entry blockquote {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  font-weight: 700;              /* Prominent black weights matching screenshot texture */
+  color: #111111;
+  margin: 0 0 24px 0;            /* Separation margin above metadata tags */
+  padding: 0;
+  text-indent: -0.4em;           /* Helps pull quotation markers perfectly inline */
+}
+
+/* Institution Meta Line */
+.institution-meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #444444;                /* Slightly lighter contrast color for meta elements */
+  margin: 0;
+  line-height: 1.5;
+}
+
+.institution-meta strong {
+  font-weight: 600;
+}
+
+/* 📱 Responsive Adaptive Breakdown */
+@media (max-width: 992px) {
+  .education-layout-container {
+    flex-direction: column;      /* Stacks title above content items */
+    gap: 50px;
+  }
+  
+  .education-title-column {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-entries-column {
+    flex-direction: column;    /* Stacks individual schools vertically on mobile screens */
+    gap: 40px;
+  }
+  
+  .education-layout-section {
+    padding: 60px 6%;            /* Compact spacing constraints on devices */
+  }
+}
+

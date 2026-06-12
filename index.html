@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <script src="js/contact.js"></script>
 
     <!-- Header -->
     <header>
@@ -322,39 +323,82 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+        <!-- Contact Form -->
 
-        <h3>Adri</h3>
-
-        <p>123 Demo Street, New York</p>
-        <p>(555) 555-5555</p>
-        <p>email@example.com</p>
-
-        <form>
-            <input
-                type="text"
-                placeholder="First Name"
-                required
-            >
-
-            <input
-                type="text"
-                placeholder="Last Name"
-                required
-            >
-
-            <input
-                type="email"
-                placeholder="Email"
-                required
-            >
-
-            <button type="submit">
-                Submit
-            </button>
+    <section class="subscribe-section">
+      <h2 class="subscribe-main-title">Contact Form</h2>
+      
+      <div class="subscribe-card-panel">
+        <form class="subscribe-form"  id="customContactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="4dcc97fb-d48d-4e4f-be25-1b76c4bb031b">
+          <div class="form-group-row">
+            <div class="input-field-wrapper">
+              <label for="first-name">Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="" required />
+              <span class="sub-label">First Name</span>
+            </div>
+            
+            <div class="input-field-wrapper">
+              <label class="desktop-hidden-label">&nbsp;</label>
+              <input type="text" id="last-name" name="last-name" placeholder="" required />
+              <span class="sub-label">Last Name</span>
+            </div>
+          </div>
+    
+          <div class="form-group-full">
+            <div class="input-field-wrapper">
+              <label for="email-address">Email <span class="required-indicator">(required)</span></label>
+              <input type="email" id="email-address" name="email-address" required />
+            </div>
+          </div>
+    
+          <div class="form-group-full">
+            <div class="input-field-wrapper">
+              <label for="inquiry-type">Inquiry Type <span class="required-indicator">(required)</span></label>
+              <div class="select-dropdown-container">
+                <select id="inquiry-type" name="inquiry-type" required>
+                  <option value="" disabled selected hidden>Select an option...</option>
+                  <option value="general">Full-Time Product Management Roles</option>
+                  <option value="freelance">Full-Time Project Management Roles</option>
+                  <option value="fulltime">Other Roles</option>
+                  <option value="other">General Networking</option>
+                </select>
+              </div>
+            </div>
+          </div>
+    
+          <button type="submit" class="subscribe-submit-btn">Submit</button>
+    
         </form>
 
+        <div id="formSuccessMessage" style="display: none; text-align: center; color: #ffffff; font-family: sans-serif; padding: 20px;">
+          <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Thank You!</h3>
+          <p>Your inquiry has been sent successfully. I'll get back to you shortly.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+      <div class="footer-container">
+        
+        <div class="footer-column footer-brand">
+          <h2>Adri</h2>
+        </div>
+    
+        <div class="footer-column footer-contact">
+          <p>123 Demo Street, New York</p>
+          <p>(555) 555-5555</p>
+          <p><a href="mailto:email@example.com">email@example.com</a></p>
+        </div>
+    
+        <div class="footer-column footer-credits">
+          <p>Adri</p>
+          <p>Powered by <a href="#" class="attribution-link">Squarespace Circle</a></p>
+        </div>
+    
+      </div>
     </footer>
 
 </body>

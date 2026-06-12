@@ -631,7 +631,7 @@ input[name="carousel-control"] {
 /* The Frame: acts like a window masking everything outside it */
 .carousel-viewport {
   width: 100%;
-  height: 450px;              /* Controls how tall your slider is */
+  height: 550px;              /* Controls how tall your slider is */
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }

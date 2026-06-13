@@ -25,76 +25,73 @@
         </nav>
     </header>
     
-    <section class="contact-page-layout">
+    <section class="contact-page-layout" id="contact">
   
       <div class="layout-left-column">
         <h1 class="main-headline">Let’s Work<br>Together</h1>
         
         <div class="profile-image-wrapper">
-          <img src="images/profile.jpg" alt="Juliet Chukwuemeka" class="profile-img" />
+          <img src="imgs/ProPhoto_smile.JPG" alt="Juliet Chukwuemeka" class="profile-img" />
         </div>
       </div>
     
       <div class="layout-right-column">
         <div class="contact-card-panel">
-          <form class="contact-form" id="extendedContactForm" action="https://api.web3forms.com/submit" method="POST">
-            
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-    
-            <div class="form-row-grid">
-              <div class="field-group">
-                <label for="first-name">Name</label>
-                <input type="text" id="first-name" name="first-name" required />
-                <span class="field-sublabel">First Name (required)</span>
-              </div>
-              
-              <div class="field-group">
-                <label class="desktop-spacer">&nbsp;</label>
-                <input type="text" id="last-name" name="last-name" required />
-                <span class="field-sublabel">Last Name (required)</span>
-              </div>
-            </div>
-    
-            <div class="field-group">
-              <label for="email-address">Email <span class="label-aside">(required)</span></label>
-              <input type="email" id="email-address" name="email-address" required />
-            </div>
-    
-            <div class="checkbox-group">
-              <input type="checkbox" id="newsletter" name="newsletter" value="subscribed" />
-              <label for="newsletter">Sign up for news and updates</label>
-            </div>
-    
-            <div class="field-group">
-              <label for="inquiry-reason">Dropdown <span class="label-aside">(required)</span></label>
-              <div class="select-wrapper">
-                <select id="inquiry-reason" name="inquiry-reason" required>
-                  <option value="" disabled selected hidden>I'm interested in...</option>
-                  <option value="freelance">Freelance Web Development</option>
-                  <option value="interview">Booking an Interview Slot</option>
-                  <option value="collaboration">Open Source Collaboration</option>
-                </select>
-              </div>
-            </div>
-    
-            <div class="field-group">
-              <label for="subject">Subject <span class="label-aside">(required)</span></label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-    
-            <div class="field-group">
-              <label for="message">Message <span class="label-aside">(required)</span></label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-    
-            <button type="submit" class="contact-submit-btn">Submit</button>
-    
-          </form>
+         
+          <div class="scheduler-header">
+            <h2>Book an Interview</h2>
+            <p>Select a time slot below to automatically schedule our 1:1 sync right onto my Google Calendar.</p>
+          </div>
+        
+          <div class="scheduler-wrapper">
+            <iframe 
+              src="https://calendly.com/julieth-jay-chuks/30min" 
+              title="Appointment Scheduler"
+              frameborder="0">
+            </iframe>
+          </div>
         </div>
       </div>
     
     </section>
-   
+       <!-- Header -->
+
+       <section class="cta-banner-container">
+  
+        <!-- 📷 The requested inline image element -->
+        <img src="imgs/Gemini_Image.png" alt="background image" class="cta-bg-image">
+        
+        <!-- 🖤 The dark overlay tint mask -->
+        <div class="cta-dark-overlay"></div>
+      
+        <!-- ✏️ The text and button content layer floating on top -->
+        <div class="cta-banner-content">
+          <h2 class="cta-main-title">Want to learn more?</h2>
+          <a href="projects.html" class="cta-explore-btn">Explore Projects</a>
+        </div>
+      
+      </section>
+
+        <!-- Footer -->
+    <footer class="portfolio-footer">
+      <div class="footer-container">
+        
+        <div class="footer-column footer-brand">
+          <h2>Juliet</h2>
+        </div>
+    
+        <div class="footer-column footer-contact">
+          <p>Dortmund, Germany</p>
+          <p><a href="mailto:juliet.jay.chuks@gmail.com">juliet.jay.chuks@gmail.com</a></p>
+        </div>
+    
+        <div class="footer-column footer-credits">
+          <p>Connect with me on <a href="https://www.linkedin.com/in/juliet-chukwuemeka/" target="_blank" style="color: #0077b5; class="linkedin-link">LinkedIn</a> to see my professional updates.</p>
+        </div>
+    
+      </div>
+    </footer>
+
 
   </body>
 </html>

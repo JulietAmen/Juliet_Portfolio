@@ -42,6 +42,18 @@ nav a{
   font-weight:bold;
 }
 
+
+.btn{
+  background:#b74e4e;
+  color:white;
+  padding:20px 75px;
+  border: none;
+  border-radius:30px;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+
 /* Core Page Canvas Setup Wrapper */
 .contact-page-layout {
   background-color: #f4f2ee;    /* The beautiful signature light-beige portfolio canvas color */

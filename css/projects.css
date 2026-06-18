@@ -44,23 +44,21 @@ nav a {
   font-size: 3.75rem; /* 60px equivalent */
 }
 
-/* Make lists display horizontally like tag chips */
-.skills-category ul {
-  list-style: none;
-  padding: 0;
+/* Core Section Container */
+.get-in-touch-section {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 2rem;
+  align-items: stretch;         /* Guarantees left background and right image share identical heights */
+  width: 100%;
+  padding: 0;                   /* Strips container padding to allow edge-to-edge bleed */
+  background-color: #aa524d;    /* Muted terracotta red/brown tone matching the screenshot */
+  box-sizing: border-box;
 }
 
-.skills-category li {
-  background: #f0f0f0;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: bold;
-}
+
+@media (max-width: 768px) {
+  .get-in-touch-section {
+    flex-direction: column;     /* Stacks elements: content color block on top, imagery below */
+  }
 
   #greeting {
     margin-left: 160px;
@@ -179,6 +177,7 @@ nav * {
     font-family: 'Lobster', cursive;
 }
 
+
 .main-menu {
   height: 100%;
 }
@@ -190,41 +189,6 @@ nav * {
 /* end nav styles */
 
 /* header styles */
-header {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  /* background-color: #FAF3F7; */
-  width: 100%;
-
-  /**
-   * This is used so that the header content (e.g. image)
-   * does not stretch too much on big screens
-   */
-}
-
-/**
- * This is a CSS Child Selector (>). Selection all div(s) which are direct children
- * of a header element. More info can be seen here
- * https://redi-school.github.io/nrw-html-and-css-2021-spring/lesson20/#2-css-combinator-selectors
- */
-header > div {
-  flex: 1;
-}
-
-header img {
-  width: 100%;
-  border-radius: 20px;
-  max-height: 700px;
-  /* learn more about this property
-  here https://css-tricks.com/almanac/properties/o/object-fit/  */
-  object-fit: cover;
-}
-/* end header styles */
-
-.section > h2 {
-  text-align: center;
-}
 
 #projects ul {
   display: flex;

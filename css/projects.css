@@ -1,372 +1,44 @@
-html{
-    scroll-padding-top: 50px;
-}
-
 *{
-    scroll-behavior: smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-  font-family: 'Lato', sans-serif; 
-    color: #333;
-    margin: 0;
-    font-size: 1.2em;
-    padding-top: 50px;
-}
-#about h2{
-  font-family: 'Lato', sans-serif; 
-
+  font-family:Arial, sans-serif;
+  line-height:1.6;
+  color:#333;
 }
 
-#about {
-  margin-left: 100px;
+header{
+  background:#fff;
+  padding:20px 8%;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-bottom:1px solid #eee;
 }
 
-#projects {
-  margin-left: 100px;
-}
-#contact{
-  margin-left: 100px;
-}
-.section {
-    padding: 20px;
-    margin: 25px;
-  }
- 
-
-nav a {
-    text-decoration: none;
-  }
-
-  /* Style for font family on headline */
-.hero-text {
-  font-family: 'Playfair Display', serif; 
-  font-size: 3.75rem; /* 60px equivalent */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* Core Section Container */
-.get-in-touch-section {
-  display: flex;
-  align-items: stretch;         /* Guarantees left background and right image share identical heights */
-  width: 100%;
-  padding: 0;                   /* Strips container padding to allow edge-to-edge bleed */
-  background-color: #aa524d;    /* Muted terracotta red/brown tone matching the screenshot */
-  box-sizing: border-box;
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
 }
 
-
-@media (max-width: 768px) {
-  .get-in-touch-section {
-    flex-direction: column;     /* Stacks elements: content color block on top, imagery below */
-  }
-
-  #greeting {
-    margin-left: 160px;
-    position: relative;
-  }
-
-  #greeting h1 {
-    font-family: Baskerville, "Baskerville Old Face", Garamond, "Times New Roman",
-    serif;
-}
-#greeting h2{
-  font-family: 'Lato', sans-serif; 
-}
-#greeting p{
-  font-family: 'Lato', sans-serif; 
-}
-#projects h2{
-  font-family: 'Lato', sans-serif; 
-
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
 }
 
-ul.main-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    overflow-x: auto;
-    font-family: 'Lato', sans-serif; 
-  } 
-
-.main-menu a:link,
-.main-menu a:visited {
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  height: 100%;
+.logo{
+  font-size:1.5rem;
+  font-weight:bold;
 }
 
-.main-menu a:hover,
-.main-menu a:active {
-  background-color: rgba(160, 95, 154, 0.11);
-  color: white;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Julius Sans One", sans-serif;
-}
-
-h1 {
-  font-size: 3.2em;
-}
-
-h2 {
-  font-size: 1.6em;
-}
-h5{
-  background-color: #333;
-  border-radius: 28px;
-  margin-left:10px ;
-  padding: 5px 10px;
-  width: fit-content;
-  letter-spacing: .01em;
-  display: inline;
-  color: #f3f3f3;
-}
-
-p {
-  font-size: 1.2em;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* nav styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 10;
-  background: #FAF3F7;
-  
-  width: 100%;
-  top: 0;
-  /**
-   * This height needs to be the same value as the
-   * value of the padding-top which is applied on the body.
-   * This is needed so that the navigation content and the body
-   * content do not collied with each other.
-   */
-  height: 50px;
-}
-
-nav * {
-  margin: 0;
-  padding: 0;
-}
-
-.logo {
-
-      margin: 5px 50px 10px 50px;
-}
-
-.logo a {
-  cursor: pointer;
-  color: grey;
-}
-
-.logo h2 {
-    font-family: 'Lobster', cursive;
-}
-
-
-.main-menu {
-  height: 100%;
-}
-
-.main-menu li {
-  height: 100%;
-  display: inline-block;
-}
-/* end nav styles */
-
-/* header styles */
-
-#projects ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#projects li {
-  position: relative;
-  width: 40%;
-  min-height: 700px;
-  margin: 50px;
-  list-style-type: none;
-  border: 2px solid #acbce7;
-  border-radius: 10px;
-  background-color: #30c67e;
-  background-size: cover;
-}
-
-#projects li:hover {
-  background-blend-mode: color-burn;
-}
-
-#projects .details {
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-  padding: 5px 20px;
-  background-color: #84a5d0;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
-}
-
-.survey-project {
-  background-image: url("../imgs/project-survey.png");
-}
-
-.landing-project {
-  background-image: url("../imgs/project-yoga-landing-page.png");
-}
-
-.animation-project {
-  background-image: url("../imgs/Ebook.png");
-}
-
-.blog-project {
-  background-image: url("../imgs/project-the-food-blog.png");
-}
-
-#education li {
-  list-style-type: none;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 300px;
-  padding-left: 320px;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
-  margin-bottom: 50px;
-}
-
-.paderborn {
-  background-image: url(/Users/julietchukwuemeka/Desktop/Project_Website/imgs/Logo_pader.png)
-  url("/Users/julietchukwuemeka/Desktop/Project_Website/imgs/Logo_pader.png");
-}
-
-.tambov {
-  background-image: url("../imgs/Logo_tambov.png");
-}
-
-.icon-container {
-  display: flex;
-  align-items: center;
-  min-height: 30px;
-}
-
-.icon-container *:first-child {
-  margin-right: 10px;
-}
-
-.icon-link {
-  color: inherit;
-  text-decoration: none;
-}
-.icon-link:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.icon-link:hover {
-  opacity: 0.7;
-}
-
-.mywork a{
-    text-decoration: none;
-    color: black;
-    border-bottom: 3px solid currentColor;
-    padding: 10px;
-}
-
-.mywork :hover{
-    text-decoration: none;
-    color: black;
-    border-bottom: 15px solid currentColor;
-    padding: 10px; 
-}
-
-.section h2{
-    text-align: left;
-}
-
-#container-pic img{
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    transition: all .2s ease-in-out; 
-    border-radius: 5px;
-float: right;
-max-width: 45%;
-margin-right: 10px;
-}
-
-#container-pic img:hover{
-  transform: scale(1.1); 
-}
-
-
-#container-pic2 img{
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    transition: all .2s ease-in-out; 
-border-radius: 5px;
-float: left;
-max-width: 40%;
-margin-right: 10px;
-}
-
-#container-pic2 img:hover{
-  transform: scale(1.1); 
-}
-
-div a{
-    text-decoration: none;
-    color: black;
-}
-
-.full_screen{
-  height: 300%;
-  top: -100%;
-  position:absolute;
-  left: 0;
-  width: 100%;
-  object-fit: contain;
-}
-.content{
-  margin-left: 160px;
-  display: flex;
-}
-
-#main_text{
-  float: right;
-  overflow: auto;
-  display: block;
-  max-width: 600px;
-  margin-left: -300px;
-}
-
-#education{
-  margin-left: 160px;
-}
-
-
-#skills{
-  margin-left: 160px;
-}
-
-.main-photo img{
-  border-radius: 5px;
-  width: 45%;
-}

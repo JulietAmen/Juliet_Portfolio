@@ -229,26 +229,23 @@ nav a{
 
 .career {
   display: flex;
-  justify-content: space-between; /* Spreads image to left, text to right */
   align-items: center;            /* Perfectly centers them vertically */
-  gap: 50px;                      /* Clean breathing room between columns */
+  gap: 20px;                      /* Clean breathing room between columns */
   padding: 80px 10%;              /* Spacious top/bottom and side margins */
 }
 
 .career-section {
   display: flex;
-  align-items: stretch;         /* Matches columns to the same height */
-  width: 100%;
+  width: 50%;
   background-color: #ffffff;
   padding: 0;                   /* Strips edge borders to let left image go flush */
 }
 
 .career-split {
   display: flex;
-  align-items: stretch;       /* Forces both columns to match each other's height perfectly */
   padding: 0;                 /* Strips out layout padding completely */
   background-color: #ffffff;  /* Or whatever backdrop color you prefer */
-  width: 100%;
+  width: 50%;
 }
 
 .career-image {
@@ -343,16 +340,218 @@ nav a{
   
   .career-image, 
   .career-content {
-    width: 50%;              /* Both expand to take full screen width on mobile phones */
+    width: 100%;              /* Both expand to take full screen width on mobile phones */
   }
   
   .career-image {
-    height: 50px;            /* Lowers image block box size so mobile screens aren't overwhelmed */
+    height: 100px;            /* Lowers image block box size so mobile screens aren't overwhelmed */
   }
   
   .career-content {
     padding: 50px 8%;         /* Keeps standard phone boundaries */
     text-align: center;
+  }
+}
+
+/* Core Layout Container Wrapper */
+.projects-section {
+  background-color: #f4f2ee;    /* The clean signature light-beige backdrop canvas color */
+  padding: 50px 8%;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.projects-container {
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                   /* Generates generous breathing space between project blocks */
+}
+
+/* 👥 The 2-Column Responsive Structural Matrix Card */
+.project-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Slightly larger space weight balance for the image frame */
+  align-items: center;
+  gap: 8%;
+}
+
+/* Optional Class: Alternates the side of the text and image columns on desktops */
+.project-card.inverted-row {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+.project-card.inverted-row .project-image-side {
+  order: 2;                     /* Moves image to the right column box on desktop */
+}
+.project-card.inverted-row .project-text-side {
+  order: 1;                     /* Moves text block to the left column box on desktop */
+}
+
+/* ==========================================================================
+   IMAGE SHOWCASE FRAME
+   ========================================================================== */
+.project-image-side {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;          /* Clean, crisp modern radius lines */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.project-display-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Subtle micro-interaction layout pop when a user hovers over the card image */
+.project-card:hover .project-display-img {
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY AND CONTENT STYLING
+   ========================================================================== */
+.project-text-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;       /* Signature tight tracking used across your portfolio template */
+}
+
+.project-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444444;               /* Muted slate gray readability tone */
+  margin: 0 0 28px 0;
+}
+
+/* Elegant Text Action Link */
+.project-action-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #b74e4e; /* Juliet's brand signature reddish accent line under link */
+  transition: all 0.2s ease;
+}
+
+.project-action-link:hover {
+  color: #b74e4e;
+  border-bottom-color: transparent;
+}
+
+/* ==========================================================================
+   📱 RESPONSIVE RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .projects-section {
+    padding: 60px 5%;
+  }
+
+  .projects-container {
+    gap: 80px;                  /* Compresses vertical breaks on small viewport devices */
+  }
+
+  .project-card, 
+  .project-card.inverted-row {
+    grid-template-columns: 1fr; /* Collapses horizontal matrix into a single vertical content stack */
+    gap: 30px;
+  }
+
+  /* Resets grid order properties on mobile device screen limits */
+  .project-card.inverted-row .project-image-side {
+    order: 0;                   /* Assures image block floats on top of text rows sequentially */
+  }
+  .project-card.inverted-row .project-text-side {
+    order: 0;
+  }
+
+  .project-title {
+    font-size: 1.8rem;          /* Scales down heading font size for readability on smartphones */
+  }
+}
+
+/* Core Footer Wrapper */
+.portfolio-footer {
+  background-color: #eae7e2;    /* Matches the warm, muted beige tint from the image */
+  padding: 80px 8%;             /* Deep, clean top/bottom padding constraints */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flexbox Matrix Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Spreads the 3 elements evenly across the screen */
+  align-items: flex-start;       /* Keeps all columns aligned along their top text lines */
+  max-width: 1300px;
+  margin: 0 auto;                /* Centers the row frame on ultra-wide screens */
+}
+
+/* Universal Base Column Typography */
+.footer-column p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #111111;                /* Crisp near-black text color */
+  margin: 0 0 6px 0;             /* Clean vertical spacing between text rows */
+}
+
+.footer-column p:last-child {
+  margin-bottom: 0;              /* Removes bottom trailing gaps */
+}
+
+/* Link Resets for Contact & Navigation */
+.footer-column a {
+  color: #111111;
+  text-decoration: none;         /* Removes default browser underlines */
+}
+
+/* Left Brand Column */
+.footer-brand h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;             /* Large, impactful title scale */
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  letter-spacing: -0.03em;       /* Signature tight tracking used across your portfolio */
+}
+
+/* Right Credits & Attribution Link Accent Color */
+.footer-credits .attribution-link {
+  color: #aa524d;                /* The signature terracotta red accent line from your template */
+  text-decoration: underline;    /* Underlined per the image layout specification */
+  text-underline-offset: 3px;
+}
+
+.footer-credits .attribution-link:hover {
+  color: #94443f;                /* Slightly deeper red tint on hover */
+}
+
+/* 📱 Responsive Mobile Stack Refactor */
+@media (max-width: 768px) {
+  .portfolio-footer {
+    padding: 60px 8%;            /* Tightens container padding on smaller screens */
+  }
+
+  .footer-container {
+    flex-direction: column;      /* Transmutes horizontal row into a neat vertical column stack */
+    gap: 40px;                   /* Clean visual separation breaks between elements */
+    align-items: flex-start;     /* Keeps text left-aligned cleanly on mobile viewports */
   }
 }
 }

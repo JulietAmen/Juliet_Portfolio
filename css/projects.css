@@ -254,13 +254,13 @@ nav a{
 .career-image {
   flex: 1;
   width: 50%;
-  height: 200px;              /* Adjust this default value to control how tall the row is */
+  height: 5px;              /* Adjust this default value to control how tall the row is */
   overflow: hidden;
 }
 
 .career-image img {
-  width: 50%;
-  height: 100%;
+  width: 20%;
+  height: 50%;
   display: block;
 }
 
@@ -343,11 +343,11 @@ nav a{
   
   .career-image, 
   .career-content {
-    width: 100%;              /* Both expand to take full screen width on mobile phones */
+    width: 50%;              /* Both expand to take full screen width on mobile phones */
   }
   
   .career-image {
-    height: 400px;            /* Lowers image block box size so mobile screens aren't overwhelmed */
+    height: 50px;            /* Lowers image block box size so mobile screens aren't overwhelmed */
   }
   
   .career-content {

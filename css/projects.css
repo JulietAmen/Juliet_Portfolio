@@ -42,3 +42,300 @@ nav a{
   font-weight:bold;
 }
 
+
+/* Core Section Container */
+.get-in-touch-section {
+  display: flex;
+  align-items: stretch;         /* Guarantees left background and right image share identical heights */
+  width: 100%;
+  padding: 0;                   /* Strips container padding to allow edge-to-edge bleed */
+  background-color: #aa524d;    /* Muted terracotta red/brown tone matching the screenshot */
+  box-sizing: border-box;
+}
+
+/* --- LEFT CONTENT COLUMN --- */
+.touch-content-column {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* Vertically aligns text contents in the center of the viewport */
+  padding: 100px 8%;            /* Spacious interior padding for content elements */
+  box-sizing: border-box;
+}
+
+/* Inner wrapper to enforce content max-widths from the reference layout */
+.touch-content-inner {
+  max-width: 460px;             /* Prevents paragraphs from getting too broad and unreadable */
+  width: 100%;
+}
+
+/* Section Title Typography */
+.touch-content-inner h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;               /* Clean white heading contrast */
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+/* Section Body Copy Styling */
+.touch-content-inner p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.9); /* Slightly soft white opacity tint for an elegant feel */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 48px;          /* Significant gap pushing down to the main button */
+  letter-spacing: -0.01em;
+}
+
+
+/* --- RIGHT IMAGE COLUMN --- */
+.touch-image-column {
+  flex: 1;
+  width: 50%;
+  min-height: 550px;            /* Ensures a distinct vertical presence on desktops */
+  overflow: hidden;
+}
+
+.touch-image-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* Crops and fills the column smoothly without warping proportions */
+  display: block;
+}
+
+/* 📱 Responsive Mobile Stack Shield */
+@media (max-width: 992px) {
+  .touch-content-column {
+    padding: 80px 5%;           /* Pulls in layout margins on medium or tablet-sized frames */
+  }
+}
+
+@media (max-width: 768px) {
+  .get-in-touch-section {
+    flex-direction: column;     /* Stacks elements: content color block on top, imagery below */
+  }
+  
+  .touch-content-column,
+  .touch-image-column {
+    width: 100%;                /* Forces both elements to expand to full mobile viewport width */
+  }
+  
+  .touch-image-column {
+    height: 400px;              /* Lower vertical constraint so phone users aren't scrolling forever */
+    min-height: auto;
+  }
+  
+  .touch-content-column {
+    padding: 60px 8%;
+    align-items: center;        /* Re-aligns components toward screen center on mobile viewports */
+  }
+  
+  .touch-content-inner {
+    text-align: center;
+  }
+
+.career {
+  display: flex;
+  justify-content: space-between; /* Spreads image to left, text to right */
+  align-items: center;            /* Perfectly centers them vertically */
+  gap: 50px;                      /* Clean breathing room between columns */
+  padding: 80px 10%;              /* Spacious top/bottom and side margins */
+}
+
+.career-section {
+  display: flex;
+  align-items: stretch;         /* Matches columns to the same height */
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0;                   /* Strips edge borders to let left image go flush */
+}
+
+.career-split {
+  display: flex;
+  align-items: stretch;       /* Forces both columns to match each other's height perfectly */
+  padding: 0;                 /* Strips out layout padding completely */
+  background-color: #ffffff;  /* Or whatever backdrop color you prefer */
+  width: 100%;
+}
+
+.career-image {
+  flex: 1;
+  width: 50%;
+  height: 900px;              /* Adjust this default value to control how tall the row is */
+  overflow: hidden;
+}
+
+.career-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* Cuts the image cleanly without stretching it out of proportion */
+  display: block;
+}
+
+.career-content {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* Vertically aligns blocks cleanly */
+  padding: 80px 10%;            /* Generous padding for breathing room */
+  box-sizing: border-box;
+}
+
+/* Typography Styling matching Screenshot 2026-06-10 at 22.32.28.jpg */
+.career-content h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 3.5rem;        /* Pushes down the main title away from subsets */
+}
+
+.career-block {
+  margin-bottom: 2.5rem;        /* Gaps out the career text blocks */
+}
+
+.career-block:last-of-type {
+  margin-bottom: 0;             /* Prevents extra bottom margin layout leaks */
+}
+
+.career-block h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.career-block p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;             /* Increases text-readability */
+  color: #333333;               /* Soft charcoal dark grey for reading track */
+  margin: 0;
+}
+
+.career h2,
+.projects h2,
+.testimonials h2,
+.contact h2,
+.faq h2{
+  margin-bottom:40px;
+  text-align:center;
+}
+
+@media (max-width: 992px) {
+  .career-content {
+    padding: 60px 6%;           /* Scales in text box gaps for medium screens or tablets */
+  }
+}
+
+@media(max-width:768px){
+
+  .career-section {
+    flex-direction: column;     /* Stacks the sections top-to-bottom on mobile layouts */
+  }
+
+  .career {
+    flex-direction: column;       /* Stacks columns: Image on top, text underneath on phones */
+    text-align: center;
+    gap: 30px;
+    padding: 50px 5%;
+  }
+
+  .career-split {
+    flex-direction: column;   /* Changes row into a column grid stack */
+  }
+  
+  .career-image, 
+  .career-content {
+    width: 100%;              /* Both expand to take full screen width on mobile phones */
+  }
+  
+  .career-image {
+    height: 400px;            /* Lowers image block box size so mobile screens aren't overwhelmed */
+  }
+  
+  .career-content {
+    padding: 50px 8%;         /* Keeps standard phone boundaries */
+    text-align: center;
+  }
+}
+
+/* Core Footer Wrapper */
+.portfolio-footer {
+  background-color: #eae7e2;    /* Matches the warm, muted beige tint from the image */
+  padding: 80px 8%;             /* Deep, clean top/bottom padding constraints */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flexbox Matrix Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Spreads the 3 elements evenly across the screen */
+  align-items: flex-start;       /* Keeps all columns aligned along their top text lines */
+  max-width: 1300px;
+  margin: 0 auto;                /* Centers the row frame on ultra-wide screens */
+}
+
+/* Universal Base Column Typography */
+.footer-column p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #111111;                /* Crisp near-black text color */
+  margin: 0 0 6px 0;             /* Clean vertical spacing between text rows */
+}
+
+.footer-column p:last-child {
+  margin-bottom: 0;              /* Removes bottom trailing gaps */
+}
+
+/* Link Resets for Contact & Navigation */
+.footer-column a {
+  color: #111111;
+  text-decoration: none;         /* Removes default browser underlines */
+}
+
+/* Left Brand Column */
+.footer-brand h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;             /* Large, impactful title scale */
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  letter-spacing: -0.03em;       /* Signature tight tracking used across your portfolio */
+}
+
+/* Right Credits & Attribution Link Accent Color */
+.footer-credits .attribution-link {
+  color: #aa524d;                /* The signature terracotta red accent line from your template */
+  text-decoration: underline;    /* Underlined per the image layout specification */
+  text-underline-offset: 3px;
+}
+
+.footer-credits .attribution-link:hover {
+  color: #94443f;                /* Slightly deeper red tint on hover */
+}
+
+/* 📱 Responsive Mobile Stack Refactor */
+@media (max-width: 768px) {
+  .portfolio-footer {
+    padding: 60px 8%;            /* Tightens container padding on smaller screens */
+  }
+
+  .footer-container {
+    flex-direction: column;      /* Transmutes horizontal row into a neat vertical column stack */
+    gap: 40px;                   /* Clean visual separation breaks between elements */
+    align-items: flex-start;     /* Keeps text left-aligned cleanly on mobile viewports */
+  }
+}
+}

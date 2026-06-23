@@ -84,8 +84,19 @@ nav a{
   display: flex;
   align-items: stretch;         /* Guarantees left background and right image share identical heights */
   width: 100%;
+  padding: 0px 0;                   /* Strips container padding to allow edge-to-edge bleed */
+  background-color: #c8656045;    /* Muted terracotta red/brown tone matching the screenshot */
+  box-sizing: border-box;
+}
+
+
+/* Core Section Container */
+.get-in-touch-section2 {
+  display: flex;
+  align-items: stretch;         /* Guarantees left background and right image share identical heights */
+  width: 100%;
   padding: 0;                   /* Strips container padding to allow edge-to-edge bleed */
-  background-color: #aa524d;    /* Muted terracotta red/brown tone matching the screenshot */
+  background-color: #92c86029;    /* Muted terracotta red/brown tone matching the screenshot */
   box-sizing: border-box;
 }
 
@@ -135,23 +146,25 @@ nav a{
 /* Section Title Typography */
 .touch-content-inner h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #ffffff;               /* Clean white heading contrast */
+  color: #020000;               /* Clean white heading contrast */
   font-size: 2.8rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 28px;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 /* Section Body Copy Styling */
 .touch-content-inner p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.9); /* Slightly soft white opacity tint for an elegant feel */
+  color: rgba(15, 0, 0, 0.9); /* Slightly soft white opacity tint for an elegant feel */
   font-size: 1.1rem;
   line-height: 1.6;
   margin-top: 0;
   margin-bottom: 48px;          /* Significant gap pushing down to the main button */
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 
@@ -445,7 +458,7 @@ nav a{
   color: #111111;
   text-decoration: none;
   padding-bottom: 4px;
-  border-bottom: 1px solid #b74e4e; /* Juliet's brand signature reddish accent line under link */
+  border-bottom: 1px solid #b74e4e30; /* Juliet's brand signature reddish accent line under link */
   transition: all 0.2s ease;
 }
 

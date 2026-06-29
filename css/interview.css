@@ -111,7 +111,7 @@ nav a{
   border-radius: 40px;          /* Clean container corner curvature matching your reference */
   width: 100%;
   max-width: 580px;             /* Keeps the form beautifully balanced structurally */
-  padding: 50px 40px;
+  padding: 60px 40px;
   box-sizing: border-box;
 }
 
@@ -123,28 +123,27 @@ nav a{
   box-sizing: border-box;
 }
 
-
-
-/* 🚀 THE FIX: This container defines the expanded canvas size for Calendly */
-.calendly-wrapper {
-  max-width: 1050px;            /* Broad width allows calendar side-by-side view panel */
+.calendar-container {
   width: 100%;
-  height: 850px;                /* ENHANCED: Deep height prevents internal vertical scrolling cut-offs */
-  margin: 0 auto;               /* Centers the frame horizontally on the page */
-  background-color: #ffffff;    /* Clean background canvas color for the scheduler widget */
-  border-radius: 30px;          /* Matches your portfolio design system's smooth card corners */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  overflow: hidden;             /* Keeps the calendar cleanly nested inside the rounded boundaries */
+  max-width: 2000px; /* Prevents the calendar from becoming too stretched on massive desktop screens */
+  margin: 0 auto;   /* Centers the calendar on the page */
+  padding: 30px;
 }
 
-/* Forces the embedded widget iframe to fill 100% of the wrapper canvas dimensions */
-.calendly-wrapper iframe {
+.calendar-container iframe {
   width: 100%;
-  height: 950px;
-  border: none;
-  display: block;
+  height: 500px;
+  aspect-ratio: 4 / 3; /* Maintains a crisp, readable proportion */
+  border-radius: 8px;  /* Optional: rounds the corners slightly for a modern look */
 }
 
+/* Mobile Tweak */
+@media (max-width: 600px) {
+  .calendar-container iframe {
+    aspect-ratio: 3 / 4; /* Makes it taller on mobile so the user can scroll through times easily */
+    height: 550px;       /* Gives it enough vertical breathing room */
+  }
+}
 
 .contact-form {
   display: flex;

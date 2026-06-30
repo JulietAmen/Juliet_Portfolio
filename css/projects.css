@@ -13,10 +13,18 @@ body{
 header{
   background:#fff;
   padding:20px 8%;
-  position:sticky;
+  position:fixed;
   top:0;
+  left: 0;
+  width: 100%;
   z-index:1000;
   border-bottom:1px solid #eee;
+  transition: transform 0.3s ease-in-out; /* Creates the smooth slide effect */
+}
+
+/* This class will be toggled by JavaScript */
+.nav-hidden {
+  transform: translateY(-100%);
 }
 
 nav{
@@ -45,6 +53,12 @@ nav a{
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
+  
+  /* Prevent content from being cut off by the fixed header */
+  body {
+    padding-top: 140px; /* Adjust based on your mobile header height */
+  }
+
   .portfolio-navbar {
     display: flex;
     flex-direction: column;

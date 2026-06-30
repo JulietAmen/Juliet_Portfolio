@@ -93,6 +93,22 @@
       </div>
     </footer>
 
-
+    <script>
+      const header = document.querySelector('header');
+      let lastScrollY = window.scrollY;
+    
+      window.addEventListener('scroll', () => {
+        // If scrolling down, hide the navbar. If scrolling up, show it.
+        if (window.scrollY > lastScrollY) {
+          header.classList.add('nav-hidden');
+        } else {
+          header.classList.remove('nav-hidden');
+        }
+        
+        // Update the last scroll position
+        lastScrollY = window.scrollY;
+      });
+    </script>
+    
   </body>
 </html>

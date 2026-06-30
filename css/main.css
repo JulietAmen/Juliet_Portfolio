@@ -133,6 +133,12 @@ nav a{
   padding-top: 50px;
 }
 
+.hero-content h1 {
+  font-size: 45px;
+  line-height: 60px;
+
+}
+
 /* Control the photo container size */
 .hero-image {
   flex: 1;                        /* Occupies the remaining half of the room */
@@ -170,7 +176,11 @@ nav a{
   }
   .hero-content {
     text-align: center;
+    width: 450px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
+
 }
 
 .btn{

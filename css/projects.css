@@ -53,7 +53,7 @@ nav a{
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-  
+
   /* Prevent content from being cut off by the fixed header */
   body {
     padding-top: 140px; /* Adjust based on your mobile header height */
@@ -147,11 +147,24 @@ nav a{
   display: flex;
   align-items: stretch;         /* Guarantees left background and right image share identical heights */
   width: 100%;
-  padding: 0px 0;                   /* Strips container padding to allow edge-to-edge bleed */
+  padding: 50px 5;                   /* Strips container padding to allow edge-to-edge bleed */
   background-color: #c8656045;    /* Muted terracotta red/brown tone matching the screenshot */
   box-sizing: border-box;
 }
 
+.get-in-touch-section h2 {
+  word-spacing: 10px;
+  line-height: 45px;
+}
+
+.get-in-touch-section3 {
+  display: flex;
+  align-items: stretch;         /* Guarantees left background and right image share identical heights */
+  width: 100%;
+  padding: 0px 0;                   /* Strips container padding to allow edge-to-edge bleed */
+  background-color: #c8656045;    /* Muted terracotta red/brown tone matching the screenshot */
+  box-sizing: border-box;
+}
 
 /* Core Section Container */
 .get-in-touch-section2 {

@@ -117,6 +117,7 @@ nav a{
   align-items: center;         /* Keeps content centered vertically */
   gap: 40px;
   padding-left:60px 10%;           /* Gives it a nice breathing room gap from the absolute screen edge */
+  padding-bottom:50px ; 
   min-height:90vh;
   background:#f8efefa9;
   border-top: 1px solid #000000;    /* 1px makes it thin, solid means a solid line, #000000 is pure black */
@@ -129,6 +130,7 @@ nav a{
   max-width: 600px;
   text-align: left;
   padding-left: 60px;
+  padding-top: 50px;
 }
 
 /* Control the photo container size */
@@ -136,6 +138,7 @@ nav a{
   flex: 1;                        /* Occupies the remaining half of the room */
   display: flex;
   justify-content: center;        /* Centers your photo inside its allocated half */
+  padding-top: 120px;
 }
 
 .hero-image img {
